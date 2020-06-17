@@ -129,4 +129,5 @@ Feedstock Maintainers
 =====================
 
 * [@jan-janssen](https://github.com/jan-janssen/)
+* [@uthpalaherath](https://github.com/uthpalaherath/)
 
