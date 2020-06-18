@@ -28,6 +28,7 @@ requirements:
     - xorg-libxfixes  # [linux]
   run:
     - ase
+    - importlib-metadata
     - matplotlib-base
     - mayavi
     - python
