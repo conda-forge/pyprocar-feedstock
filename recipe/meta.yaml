@@ -24,9 +24,12 @@ requirements:
     - matplotlib-base
     - mayavi
     - python
+    - pychemia
+    - pyvista
     - scikit-image
     - scipy
     - seekpath
+    - trimesh
 
 test:
   imports:
