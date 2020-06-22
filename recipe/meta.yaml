@@ -11,7 +11,7 @@ source:
   sha256: 43f7ffcac98e5e349f4beaa932e18059d3865deaba26c1debb7dfad943cfafb7
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -31,6 +31,7 @@ requirements:
     - importlib-metadata
     - matplotlib-base
     - mayavi
+    - mscorefonts
     - python
     - pychemia
     - pyvista
