@@ -34,8 +34,8 @@ requirements:
 
 test:
   imports:
-    - import pyprocar
-    - import pyprocar.abinitparser
+    - pyprocar
+    - pyprocar.abinitparser
   commands:
     - pip check
   requires:
