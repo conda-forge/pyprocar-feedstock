@@ -30,7 +30,6 @@ requirements:
     - ase
     - importlib-metadata
     - matplotlib-base
-    - mayavi
     - mscorefonts
     - python
     - pychemia
