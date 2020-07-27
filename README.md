@@ -5,7 +5,7 @@ Home: https://github.com/romerogroup/pyprocar
 
 Package license: GPL-3.0-only
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A Python library for electronic structure pre/post-processing.
 
