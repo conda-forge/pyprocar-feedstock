@@ -1,5 +1,5 @@
 {% set name = "pyprocar" %}
-{% set version = "5.5.2" %}
+{% set version = "5.5.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 869ce3a4dfaefa4f49e636cbef43d95829a1559d554e9c66422672a0176d0fdb
+  sha256: 9d142861a7765ed257d1373def94c6f18656398c1df7603241f87d94583c34ea
 
 build:
   number: 0
@@ -27,6 +27,7 @@ requirements:
     - python
     - pychemia
     - pyvista
+    - pyvistaqt
     - scikit-image
     - scipy
     - seekpath

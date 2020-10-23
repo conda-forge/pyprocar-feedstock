@@ -5,9 +5,13 @@ Home: https://github.com/romerogroup/pyprocar
 
 Package license: GPL-3.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyprocar-feedstock/blob/master/LICENSE.txt)
 
 Summary: A Python library for electronic structure pre/post-processing.
+
+Development: https://github.com/romerogroup/pyprocar
+
+Documentation: https://romerogroup.github.io/pyprocar/
 
 PyProcar is a robust, open-source Python library used for pre- and
 post-processing of the electronic structure data coming from DFT
