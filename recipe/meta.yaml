@@ -27,6 +27,7 @@ requirements:
     - python
     - pychemia
     - pyvista
+    - pyvistaqt
     - scikit-image
     - scipy
     - seekpath
