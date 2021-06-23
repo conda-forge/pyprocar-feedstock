@@ -37,6 +37,7 @@ test:
   imports:
     - pyprocar
     - pyprocar.abinitparser
+    - pyprocar.bandsplot
   commands:
     - pip check
   requires:
