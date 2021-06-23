@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyProcar-{{ version }}.tar.gz
-  sha256: 3ece71463acf61c0b2d6810f52b2786f813a4405f8262a560fa50a7300356b83
+  sha256: 8461385f808518f9609826683b23ecda6326468b829586dde6018ee58c728b58
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
