@@ -11,20 +11,20 @@ source:
   sha256: 3ece71463acf61c0b2d6810f52b2786f813a4405f8262a560fa50a7300356b83
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - ase
     - importlib-metadata
     - matplotlib-base
     - mscorefonts
-    - python
+    - python >=3.6
     - pychemia
     - pyvista
     - pyvistaqt
