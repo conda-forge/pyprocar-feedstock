@@ -8,40 +8,37 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 43f7ffcac98e5e349f4beaa932e18059d3865deaba26c1debb7dfad943cfafb7
+  sha256: 3ece71463acf61c0b2d6810f52b2786f813a4405f8262a560fa50a7300356b83
 
 build:
   number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}     # [linux]
   host:
     - pip
     - python
-    - xorg-libxfixes  # [linux]
   run:
     - ase
     - importlib-metadata
     - matplotlib-base
+    - mscorefonts
     - python
     - pychemia
     - pyvista
+    - pyvistaqt
     - scikit-image
     - scipy
     - seekpath
     - trimesh
 
 test:
+  imports:
+    - pyprocar
+    - pyprocar.abinitparser
   commands:
-    - {{ RECIPE_DIR }}/run_test.bat  # [win]
-    - bash {{ RECIPE_DIR }}/run_test.sh  # [not win]
+    - pip check
   requires:
     - pip
 
