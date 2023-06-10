@@ -30,6 +30,7 @@ requirements:
     - pyvistaqt
     - scikit-image
     - scipy
+    - sympy
     - seekpath
     - trimesh
 
