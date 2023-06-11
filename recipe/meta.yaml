@@ -33,6 +33,7 @@ requirements:
     - sympy
     - seekpath
     - trimesh
+    - gdown
 
 test:
   imports:
