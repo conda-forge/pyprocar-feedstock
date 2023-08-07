@@ -34,6 +34,7 @@ requirements:
     - seekpath
     - trimesh
     - gdown
+    - pyyaml
 
 test:
   imports:
