@@ -35,6 +35,7 @@ requirements:
     - trimesh
     - gdown
     - pyyaml
+    - scikit-learn
 
 test:
   imports:
