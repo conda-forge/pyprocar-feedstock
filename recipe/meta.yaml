@@ -1,5 +1,5 @@
 {% set name = "pyprocar" %}
-{% set version = "6.1.4" %}
+{% set version = "6.1.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyProcar-{{ version }}.tar.gz
-  sha256: e0f5253c1e16872f9706b9a9dc621be99af89a410685c09d7b5499c1d9776061
+  sha256: 2d1e687a39110b91080d5e4ed57d3566b0e93df8d44516f3f4bd0be6e1c37701
 
 build:
   number: 0
