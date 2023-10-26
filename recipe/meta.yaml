@@ -64,7 +64,6 @@ about:
   doc_url: https://romerogroup.github.io/pyprocar/
   dev_url: https://github.com/romerogroup/pyprocar
 
-
 extra:
   recipe-maintainers:
     - jan-janssen
