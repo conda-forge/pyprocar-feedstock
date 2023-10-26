@@ -1,7 +1,6 @@
 {% set name = "pyprocar" %}
 {% set version = "6.1.5" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,31 +10,28 @@ source:
   sha256: 2d1e687a39110b91080d5e4ed57d3566b0e93df8d44516f3f4bd0be6e1c37701
 
 build:
-  number: 0
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python >=3.6
   run:
-    - ase
-    - importlib-metadata
-    - matplotlib-base
-    - mscorefonts
     - python >=3.6
-    - pychemia
-    - pyvista
-    - pyvistaqt
-    - scikit-image
-    - scipy
-    - sympy
-    - seekpath
-    - trimesh
     - gdown
-    - pyyaml
+    - matplotlib-base
+    - numpy
+    - pyvista
+    - scikit-image
     - scikit-learn
+    - scipy
+    - seekpath
+    - spglib
+    - trimesh
+    - ase
+    - sympy
+    - pyyaml
 
 test:
   imports:
@@ -47,11 +43,10 @@ test:
 
 about:
   home: https://github.com/romerogroup/pyprocar
+  summary: A Python library for electronic structure pre/post-processing.
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE
-  summary: A Python library for electronic structure pre/post-processing.
-
   description: |
     PyProcar is a robust, open-source Python library used for pre- and
     post-processing of the electronic structure data coming from DFT
@@ -67,6 +62,7 @@ about:
     of states and generating a k-path for a given crystal structure.
   doc_url: https://romerogroup.github.io/pyprocar/
   dev_url: https://github.com/romerogroup/pyprocar
+
 
 extra:
   recipe-maintainers:
