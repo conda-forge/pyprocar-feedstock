@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyProcar-{{ version }}.tar.gz
   sha256: f20b58113a52bc0f94a48425636edb3e571cfb5108356b2b0af2bd99a8e84b80
+  patch:
+    - requirements.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -19,14 +21,6 @@ requirements:
     - python >=3.6
     - pip
   run:
-    - numpydoc
-    - pydata-sphinx-theme
-    - pypandoc
-    - sphinx-copybutton
-    - sphinx-design
-    - sphinx-gallery
-    - sphinxcontrib-autoyaml
-    - wheel
     - python >=3.6
     - gdown
     - matplotlib-base
