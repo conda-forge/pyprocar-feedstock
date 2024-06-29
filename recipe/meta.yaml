@@ -26,7 +26,6 @@ requirements:
     - sphinx-design
     - sphinx-gallery
     - sphinxcontrib-autoyaml
-    - sphinxcontrib-yaml
     - wheel
     - python >=3.6
     - gdown
