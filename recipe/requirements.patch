@@ -1,0 +1,28 @@
+From e915c224f913d22b48a53fbbb374c162996bc682 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Sat, 29 Jun 2024 23:08:08 +0200
+Subject: [PATCH] Update requirements.txt
+
+---
+ requirements.txt | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+diff --git a/requirements.txt b/requirements.txt
+index 60d6a694..7b73e9ff 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -11,13 +11,3 @@ ase
+ sympy
+ PyYAML
+ scikit-learn
+-
+-sphinx_design
+-sphinx-copybutton
+-sphinx-gallery
+-numpydoc
+-pypandoc
+-pydata-sphinx-theme
+-sphinxcontrib-yaml
+-sphinxcontrib-autoyaml
+-wheel
+\ No newline at end of file
