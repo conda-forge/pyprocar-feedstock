@@ -1,5 +1,5 @@
 {% set name = "pyprocar" %}
-{% set version = "6.1.10" %}
+{% set version = "6.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyProcar-{{ version }}.tar.gz
-  sha256: 300c545685a0e099a37275c104ad4c5c5a45902517f4da1a42ca422cd8089bff
+  sha256: f20b58113a52bc0f94a48425636edb3e571cfb5108356b2b0af2bd99a8e84b80
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -19,10 +19,19 @@ requirements:
     - python >=3.6
     - pip
   run:
+    - numpydoc
+    - pydata-sphinx-theme
+    - pypandoc
+    - sphinx-copybutton
+    - sphinx-design
+    - sphinx-gallery
+    - sphinxcontrib-autoyaml
+    - sphinxcontrib-yaml
+    - wheel
     - python >=3.6
     - gdown
     - matplotlib-base
-    - numpy
+    - numpy <2.0
     - pyvista
     - scikit-image
     - scikit-learn
