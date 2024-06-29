@@ -8,7 +8,7 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyProcar-{{ version }}.tar.gz
   sha256: f20b58113a52bc0f94a48425636edb3e571cfb5108356b2b0af2bd99a8e84b80
-  patch:
+  patches:
     - requirements.patch
 
 build:
