@@ -1,21 +1,20 @@
-From b76ebef8f4c5e1e171c5b6a9bc11f02e2b9ecfb1 Mon Sep 17 00:00:00 2001
+From eac7cde9db40baa1f344dee46ddd2e70c1477c15 Mon Sep 17 00:00:00 2001
 From: Jan Janssen <jan-janssen@users.noreply.github.com>
-Date: Sun, 30 Jun 2024 07:22:40 +0200
+Date: Sun, 30 Jun 2024 07:42:32 +0200
 Subject: [PATCH] Update requirements.txt
 
 ---
- requirements.txt | 10 ----------
- 1 file changed, 10 deletions(-)
+ requirements.txt | 9 ---------
+ 1 file changed, 9 deletions(-)
 
 diff --git a/requirements.txt b/requirements.txt
-index 60d6a69..7b73e9f 100644
+index 60d6a694..542bbd02 100644
 --- a/requirements.txt
 +++ b/requirements.txt
-@@ -11,13 +11,3 @@ ase
- sympy
+@@ -12,12 +12,3 @@ sympy
  PyYAML
  scikit-learn
--
+ 
 -sphinx_design
 -sphinx-copybutton
 -sphinx-gallery
