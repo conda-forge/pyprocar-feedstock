@@ -1,13 +1,13 @@
 {% set name = "pyprocar" %}
-{% set version = "6.2.0" %}
+{% set version = "6.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyProcar-{{ version }}.tar.gz
-  sha256: f20b58113a52bc0f94a48425636edb3e571cfb5108356b2b0af2bd99a8e84b80
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 17b65e0ec8659cd4ca7b32aa4beaa6cd2c8ad4bf4237ace5062495ae5573914a
   patches:
     - requirements.patch
 
@@ -34,6 +34,7 @@ requirements:
     - trimesh
     - ase
     - sympy
+    - pandas
     - pyyaml
 
 test:
