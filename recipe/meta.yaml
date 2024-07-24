@@ -21,16 +21,6 @@ requirements:
     - python >=3.6
     - pip
   run:
-    - numpydoc
-    - pandas
-    - pydata-sphinx-theme
-    - pypandoc
-    - sphinx-copybutton
-    - sphinx-design
-    - sphinx-gallery
-    - sphinxcontrib-autoyaml
-    - sphinxcontrib-yaml
-    - wheel
     - python >=3.6
     - gdown
     - matplotlib-base
