@@ -18,6 +18,8 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - setuptools-scm
+    - setuptools
   run:
     - python >=3.6
     - gdown
