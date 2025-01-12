@@ -1,13 +1,13 @@
 {% set name = "pyprocar" %}
-{% set version = "6.3.1" %}
+{% set version = "6.3.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 035f99cb2efc1056ecda9f70810233010b7ffecb2350220dc86ef795e1522d6e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: bf516ebc647cd6b1540d7cd4d276be91b5828ad9a7e6a27eb62c3cd39813ede4
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -21,6 +21,7 @@ requirements:
     - setuptools-scm
     - setuptools
   run:
+    - variconfig
     - python >=3.6
     - gdown
     - matplotlib-base
