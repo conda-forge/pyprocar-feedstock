@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools-scm
     - setuptools
   run:
     - variconfig
-    - python >=3.6
+    - python >={{ python_min }}
     - gdown
     - matplotlib-base
     - numpy <2.0
@@ -45,6 +45,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/romerogroup/pyprocar
