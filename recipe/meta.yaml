@@ -1,5 +1,5 @@
 {% set name = "pyprocar" %}
-{% set version = "6.4.6" %}
+{% set version = "6.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6130e8731bfa4a645153c4bfee930a6eb20dba467c53ce894b8822e5c1d565d4
+  sha256: 19fd21ececba049afb314cd2ccd2d6acd3fb2b80efb06ad8ed3547fab033892c
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -21,6 +21,7 @@ requirements:
     - setuptools-scm
     - setuptools
   run:
+    - huggingface_hub
     - dill
     - variconfig
     - python >={{ python_min }}
