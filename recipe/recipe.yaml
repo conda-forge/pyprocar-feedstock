@@ -42,6 +42,7 @@ requirements:
     - sympy
     - pandas
     - pyyaml
+    - vtk <=9.3
 
 tests:
   - python:
