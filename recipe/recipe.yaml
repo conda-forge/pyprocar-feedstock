@@ -1,22 +1,25 @@
-{% set name = "pyprocar" %}
-{% set version = "6.5.0" %}
+schema_version: 1
+
+context:
+  name: pyprocar
+  version: "6.5.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: 19fd21ececba049afb314cd2ccd2d6acd3fb2b80efb06ad8ed3547fab033892c
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
   noarch: python
-  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools-scm
     - setuptools
@@ -24,11 +27,11 @@ requirements:
     - huggingface_hub
     - dill
     - variconfig
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - gdown
     - matplotlib-base
     - numpy <2.0
-    - pyvista
+    - pyvista <=0.45
     - scikit-image
     - scikit-learn
     - scipy
@@ -39,21 +42,18 @@ requirements:
     - sympy
     - pandas
     - pyyaml
+    - vtk <=9.3
 
-test:
-  imports:
-    - pyprocar
-  commands:
-    - pip check
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - pyprocar
+      pip_check: true
+      python_version: ${{ python_min }}
 
 about:
-  home: https://github.com/romerogroup/pyprocar
   summary: A Python library for electronic structure pre/post-processing.
   license: GPL-3.0-only
-  license_family: GPL
   license_file: LICENSE
   description: |
     PyProcar is a robust, open-source Python library used for pre- and
@@ -68,8 +68,9 @@ about:
     velocity plots, unfolding bands of a super cell, comparing band
     structures from multiple DFT calculations, plotting partial density
     of states and generating a k-path for a given crystal structure.
-  doc_url: https://romerogroup.github.io/pyprocar/
-  dev_url: https://github.com/romerogroup/pyprocar
+  homepage: https://github.com/romerogroup/pyprocar
+  repository: https://github.com/romerogroup/pyprocar
+  documentation: https://romerogroup.github.io/pyprocar/
 
 extra:
   recipe-maintainers:
