@@ -31,7 +31,7 @@ requirements:
     - gdown
     - matplotlib-base
     - numpy <2.0
-    - pyvista
+    - pyvista <=0.45
     - scikit-image
     - scikit-learn
     - scipy
